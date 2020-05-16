@@ -1,20 +1,21 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   background-image: linear-gradient(to right, rgb(212, 54, 54), rgb(54, 4, 87));
   background-size: auto 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arimo', sans-serif;
+  font-size: 19px;
 }
 
 header {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 a {
@@ -28,12 +29,11 @@ a:hover {
 }
 
 .menu {
-  position: fixed;
-  width: 100vw;
   background-color: whitesmoke;
+  position: fixed;
   top: 0;
+  width: 100vw;
 }
-
 
 .menu ul {
   display: flex;
@@ -49,22 +49,105 @@ a:hover {
   padding: 10px 20px;
 }
 
-.site-subtitle,
-.site-title{
+/*Apresentação do site*/
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  margin-bottom: 5px;
+}
+
+.title,
+.subtitle{
+  text-align: center;
   color: whitesmoke;
+}
+      
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  line-height: 1.8em;
+}
+
+.portfolio h2,
+.contato h2{
+  font-family: 'Playfair Display', serif;
+  color: whitesmoke;
+  margin-bottom: 1em;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.portfolio,
+.contato {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+#cc h2,
+.site-subtitle {
+  color: #f5f5f5;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  margin: 10px 15px;
+}
+
+/* Sobre */
+
+.minha-foto{
+  width: 120px;
+}
+
+#cc .imagem{
+  display: grid;
+  gap: 1em;
+  justify-content: center;
+  grid-template-columns: repeat(3, 140px);
+}
+
+@media (min-width: 880px) {
+  .portofolio .grid {
+    grid-template-columns: 240px 240px 240px;
+  }
+
+  .img-portfolio {
+    height: 220px;
+    width: 220px;
+  }
+}
+
+#cc .figure {
   text-align: center;
 }
 
-.site-title{
-  font-size: 3em;
-}
-
-.site-subtitle {
-  font-style: italic;
-}
-
 .img-portfolio {
-  width: 250px;
-  height: 250px;
+  margin-bottom: 1em;
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  object-position: bottom; 
+  border-radius: 5%;
+  transition: transform 500ms;
 }
 
+.img-portfolio:hover {
+  transform: scale(1.2);
+}
+
+/* Contato */
+
+.contato a {
+  font-size: 4.5em;
+  color: rgb(196, 2, 196);
+  transition: text-shadow 1s;
+}
+
+.contato a:active, 
+.contato a:hover {
+  text-decoration: none;
+  color: rgb(207, 106, 23);
+  text-shadow: 0px 0px 10px rgb(54, 4, 87);
+}
+
+.contato .icons {
+  text-align: center;
+}
