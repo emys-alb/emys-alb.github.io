@@ -18,7 +18,9 @@ header {
   display: flex;
   height: 100vh;
   justify-content: center;
+  
 }
+
 
 a {
   color: rgb(129, 9, 129);
@@ -44,6 +46,14 @@ a:hover {
 
 .menu li {
   list-style: none;
+}
+
+.menu li ul {
+  display: none;
+}
+
+.menu li:hover ul{
+  display: block;
 }
 
 .menu a {
@@ -111,9 +121,17 @@ a:hover {
 }
 
 #sobre  .avatar img{
-  margin-left: 2em;
+  /*  */
+  width: 280px;
   border-radius: 50%;
-  float: right;
+  /*  */
+}
+
+@media (min-width: 560px) {
+  #sobre  .avatar img{
+    margin-left: 2em;
+    float: right;
+  }
 }
 
 /* Tecnologias */
@@ -126,15 +144,18 @@ a:hover {
 }
 
 
-@media (min-width: 540px) {
-  .portofolio .grid {
-    grid-template-columns: repeat(3, 140px);
+@media (min-width: 560px) {
+  #cc .imagem{
+    grid-template-columns: repeat(2, 240px);
   }
 }
 
 @media (min-width: 880px) {
-  .portofolio .grid {
-    grid-template-columns: 240px 240px 240px;
+  #cc .imagem {
+    grid-template-columns: 260px 260px 260px;
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh-);
   }
 
   .img-portfolio {
