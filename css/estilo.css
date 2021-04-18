@@ -211,3 +211,9 @@ a:hover {
   text-align: center;
   grid-template-columns: repeat(3, 170px);
 }
+
+@media (max-width: 600px) {
+  #contato .icons{
+    grid-template-columns: repeat(3, 120px);
+  }
+}
