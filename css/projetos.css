@@ -36,4 +36,15 @@
     font-size: 0.8em;
     text-align: justify;
     color: #F4F3EE;
- }
+}
+
+#projetos .linguagem {
+  display: flex;
+  margin-top: 0.7em;
+  justify-content: end;
+}
+
+#projetos .linguagem p {
+  color: #ccbcbc;
+  font-size: 0.7em;
+}
