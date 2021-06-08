@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #baebff, #c55df6);
+  background-image: linear-gradient(to right, #7BB9E0, #F2AED4);
   background-size: auto 100vh;
   font-family: 'Arimo', sans-serif;
   font-size: 19px;
@@ -21,31 +21,43 @@ header {
   
 }
 
-
 a {
-  color: #363F4D;
+  color: #7D5B25;
   text-decoration: none;
 }
 
 a:hover {
-  color: #363F4D;
+  color: #7D5B25;
   text-decoration: underline;
 }
 
 .menu {
-  background-color: #D19BCB;
+  background-color: #C6C2D7;
   position: fixed;
   top: 0;
+  padding: 0.2em;
   width: 100vw;
+}
+
+.newBack{
+  background-color: #C6C2D7;
+  position: fixed;
+  width: fit-content !important;
+}
+
+.menu a {
+  font-weight: bold;
 }
 
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .menu li {
   list-style: none;
+  justify-content: space-around;
+  margin: 0 1em 0 1em;
 }
 
 .menu li ul {
@@ -60,7 +72,6 @@ a:hover {
   display: block;
   padding: 10px 20px;
 }
-
 
 .title {
   font-family: 'Lobster', cursive;
@@ -80,12 +91,6 @@ a:hover {
   line-height: 1.8em;
 }
 
-.newBack{
-  background-color: #D19BCB;
-  position: fixed;
-  width: fit-content !important;
-}
-
 #sobre,
 #portfolio,
 #contato,
@@ -102,6 +107,17 @@ a:hover {
   color: #7D5B25;
   font-size: 2em;
   line-height: 3em;
+}
+
+@media (max-width: 1200px) {
+  #sobre h2,
+  #portfolio h2,
+  #contato h2,
+  #tecs h2 {
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+  }
 }
 
 @media (min-width: 1200px) {
